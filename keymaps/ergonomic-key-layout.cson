@@ -1,0 +1,91 @@
+# Keybindings require three things to be fully defined: A selector that is
+# matched against the focused element, the keystroke and the command to
+# execute.
+#
+# Below is a basic keybinding which registers on all platforms by applying to
+# the root workspace element.
+
+# For more detailed documentation see
+# https://atom.io/docs/latest/advanced/keymaps
+'.workspace':
+  'ctrl-alt-o': 'ergonomic-key-layout:toggle'
+
+'.editor:not(.mini)':
+  # resetting keys
+  'ctrl-o': 'unset!'
+
+'body':
+  # resetting keys
+  'ctrl-f': 'unset!'
+  'cmd-o': 'unset!'
+  'cmd-k alt-cmd-w': 'unset!'
+  'cmd-k cmd-0': 'unset!'
+  'cmd-k cmd-1': 'unset!'
+  'cmd-k cmd-2': 'unset!'
+  'cmd-k cmd-3': 'unset!'
+  'cmd-k cmd-4': 'unset!'
+  'cmd-k cmd-5': 'unset!'
+  'cmd-k cmd-6': 'unset!'
+  'cmd-k cmd-7': 'unset!'
+  'cmd-k cmd-8': 'unset!'
+  'cmd-k cmd-9': 'unset!'
+  'cmd-k cmd-b': 'unset!'
+  'cmd-k cmd-d': 'unset!'
+  'cmd-k cmd-l': 'unset!'
+  'cmd-k cmd-n': 'unset!'
+  'cmd-k cmd-p': 'unset!'
+  'cmd-k cmd-u': 'unset!'
+  'cmd-k cmd-w': 'unset!'
+  'cmd-k up': 'unset!'
+  'cmd-k down': 'unset!'
+  'cmd-k left': 'unset!'
+  'cmd-k right': 'unset!'
+  'cmd-k cmd-up': 'unset!'
+  'cmd-k cmd-down': 'unset!'
+  'cmd-k cmd-left': 'unset!'
+  'cmd-k cmd-right': 'unset!'
+
+  # split screen
+  'cmd-1': 'maximize-panes:maximize'
+  'cmd-2': 'pane:split-up'
+  'cmd-3': 'pane:split-right'
+  'ctrl-a': 'window:focus-pane-on-left'
+  'ctrl-d': 'window:focus-pane-on-right'
+  'ctrl-w': 'window:focus-pane-above'
+  'ctrl-s': 'window:focus-pane-below'
+
+  # general actions
+  'ctrl-o': 'application:open'
+
+'.workspace .editor:not(.mini)':
+  # redefine pane switching again to override editor defaults
+  'ctrl-a': 'window:focus-pane-on-left'
+  'ctrl-d': 'window:focus-pane-on-right'
+  'ctrl-w': 'window:focus-pane-above'
+  'ctrl-s': 'window:focus-pane-below'
+
+  # key navigation
+  'cmd-j': 'core:move-left'
+  'cmd-k': 'core:move-down'
+  'cmd-l': 'core:move-right'
+  'cmd-i': 'core:move-up'
+  'shift-cmd-i': 'ergonomic-key-layout:scroll-down'
+  'shift-cmd-k': 'ergonomic-key-layout:scroll-up'
+  'shift-cmd-j': 'editor:move-to-first-character-of-line'
+  'shift-cmd-l': 'editor:move-to-end-of-line'
+  'cmd-u': 'editor:move-to-beginning-of-word'
+  'cmd-o': 'editor:move-to-end-of-word'
+  'shift-cmd-u': 'editor:move-to-beginning-of-previous-paragraph'
+  'shift-cmd-o': 'editor:move-to-beginning-of-next-paragraph'
+  'cmd-h': 'core:move-to-top'
+  'shift-cmd-h': 'core:move-to-bottom'
+
+  # text editing
+  'ctrl-space': 'autocomplete:toggle'
+  'cmd-f': 'core:delete'
+  'ctrl-f': 'find-and-replace:show'
+  'cmd-g cmd-g': 'go-to-line:toggle'
+
+'.select-list, .tree-view, .preview-pane':
+  'cmd-k': 'core:move-down'
+  'cmd-i': 'core:move-up'
