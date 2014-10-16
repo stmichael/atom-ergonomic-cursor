@@ -65,10 +65,10 @@
   'ctrl-s': 'window:focus-pane-below'
 
   # key navigation
-  'cmd-j': 'core:move-left'
-  'cmd-k': 'core:move-down'
-  'cmd-l': 'core:move-right'
-  'cmd-i': 'core:move-up'
+  'cmd-j': 'ergonomic-key-layout:move-left'
+  'cmd-k': 'ergonomic-key-layout:move-down'
+  'cmd-l': 'ergonomic-key-layout:move-right'
+  'cmd-i': 'ergonomic-key-layout:move-up'
   'shift-cmd-i': 'core:page-up'
   'shift-cmd-k': 'core:page-down'
   'shift-cmd-j': 'editor:move-to-first-character-of-line'
@@ -81,6 +81,7 @@
   'shift-cmd-h': 'core:move-to-bottom'
 
   # text editing
+  'cmd-space': 'ergonomic-key-layout:activate-selection'
   'ctrl-space': 'autocomplete:toggle'
   'cmd-f': 'core:delete'
   'ctrl-f': 'find-and-replace:show'
