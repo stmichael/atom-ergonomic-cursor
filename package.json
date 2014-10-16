@@ -1,10 +1,10 @@
 {
   "name": "ergonomic-key-layout",
   "main": "./lib/ergonomic-key-layout",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A short description of your package",
-  "activationEvents": ["ergonomic-key-layout:toggle"],
-  "repository": "https://github.com/atom/ergonomic-key-layout",
+  "activationEvents": [],
+  "repository": "https://github.com/stmichael/ergonomic-key-layout",
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"
