@@ -1,10 +1,10 @@
 {
-  "name": "ergonomic-key-layout",
-  "main": "./lib/ergonomic-key-layout",
+  "name": "ergonomic-cursor",
+  "main": "./lib/ergonomic-cursor",
   "version": "0.0.1",
-  "description": "A short description of your package",
+  "description": "Ergonomic key layout for cursor movement in Atom",
   "activationCommands": [],
-  "repository": "https://github.com/stmichael/ergonomic-key-layout",
+  "repository": "https://github.com/stmichael/atom-ergonomic-cursor",
   "license": "MIT",
   "engines": {
     "atom": ">=0.161.0"

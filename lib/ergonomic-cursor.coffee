@@ -32,23 +32,23 @@ module.exports =
   activate: ->
     self = @
     atom.commands.add 'atom-text-editor',
-      'ergonomic-key-layout:activate-selection': ->
+      'ergonomic-cursor:activate-selection': ->
         self.getActiveEditor()._incrementalSelection ||= new IncrementalSelection(self.getActiveEditor())
         if self.getActiveEditor()._incrementalSelection.didPositionChange()
           self.deactivateSelection()
           self.activateSelection()
         else
           self.deactivateSelection()
-      'ergonomic-key-layout:move-right': ->
+      'ergonomic-cursor:move-right': ->
         self.getActiveEditor().moveCursors (cursor) ->
           cursor.moveRight(1, false)
-      'ergonomic-key-layout:move-left': ->
+      'ergonomic-cursor:move-left': ->
         self.getActiveEditor().moveCursors (cursor) ->
           cursor.moveLeft(1, false)
-      'ergonomic-key-layout:move-up': ->
+      'ergonomic-cursor:move-up': ->
         self.getActiveEditor().moveCursors (cursor) ->
           cursor.moveUp(1, false)
-      'ergonomic-key-layout:move-down': ->
+      'ergonomic-cursor:move-down': ->
         self.getActiveEditor().moveCursors (cursor) ->
           cursor.moveDown(1, false)
 

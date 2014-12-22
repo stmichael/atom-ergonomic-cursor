@@ -1,12 +1,12 @@
 {Point} = require 'atom'
 
-describe "ErgonomicKeyLayout", ->
+describe "Ergonomic cursor movement", ->
   editor = null
   cursor = null
 
   beforeEach ->
     waitsForPromise ->
-      atom.packages.activatePackage('ergonomic-key-layout')
+      atom.packages.activatePackage('ergonomic-cursor')
     waitsForPromise ->
       atom.workspace.open('sample.js')
     runs ->
@@ -15,19 +15,19 @@ describe "ErgonomicKeyLayout", ->
       cursor.setBufferPosition([0, 0])
 
   activateSelection = ->
-    atom.commands.dispatch atom.views.getView(editor), 'ergonomic-key-layout:activate-selection'
+    atom.commands.dispatch atom.views.getView(editor), 'ergonomic-cursor:activate-selection'
 
   moveRight = ->
-    atom.commands.dispatch atom.views.getView(editor), 'ergonomic-key-layout:move-right'
+    atom.commands.dispatch atom.views.getView(editor), 'ergonomic-cursor:move-right'
 
   moveLeft = ->
-    atom.commands.dispatch atom.views.getView(editor), 'ergonomic-key-layout:move-left'
+    atom.commands.dispatch atom.views.getView(editor), 'ergonomic-cursor:move-left'
 
   moveUp = ->
-    atom.commands.dispatch atom.views.getView(editor), 'ergonomic-key-layout:move-up'
+    atom.commands.dispatch atom.views.getView(editor), 'ergonomic-cursor:move-up'
 
   moveDown = ->
-    atom.commands.dispatch atom.views.getView(editor), 'ergonomic-key-layout:move-down'
+    atom.commands.dispatch atom.views.getView(editor), 'ergonomic-cursor:move-down'
 
   expectSelectionAt = (start, end) ->
     expect(cursor.selection.getBufferRange().start).toEqual(new Point(start[0], start[1]))

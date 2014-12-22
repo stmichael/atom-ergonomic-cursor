@@ -39,10 +39,10 @@
 
 'atom-workspace atom-text-editor:not(.mini)':
   # key navigation
-  'cmd-j': 'ergonomic-key-layout:move-left'
-  'cmd-k': 'ergonomic-key-layout:move-down'
-  'cmd-l': 'ergonomic-key-layout:move-right'
-  'cmd-i': 'ergonomic-key-layout:move-up'
+  'cmd-j': 'ergonomic-cursor:move-left'
+  'cmd-k': 'ergonomic-cursor:move-down'
+  'cmd-l': 'ergonomic-cursor:move-right'
+  'cmd-i': 'ergonomic-cursor:move-up'
   'shift-cmd-i': 'core:page-up'
   'shift-cmd-k': 'core:page-down'
   'shift-cmd-j': 'editor:move-to-first-character-of-line'
@@ -55,7 +55,7 @@
   'shift-cmd-h': 'core:move-to-bottom'
 
   # text editing
-  'cmd-space': 'ergonomic-key-layout:activate-selection'
+  'cmd-space': 'ergonomic-cursor:activate-selection'
 
 '.select-list, .tree-view, .preview-pane, .tool-panel':
   'cmd-k': 'core:move-down'
