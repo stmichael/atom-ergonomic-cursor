@@ -7,13 +7,6 @@
 
 # For more detailed documentation see
 # https://atom.io/docs/latest/advanced/keymaps
-'atom-workspace':
-  'ctrl-alt-o': 'ergonomic-key-layout:toggle'
-
-'atom-text-editor:not(.mini)':
-  # resetting keys
-  'ctrl-o': 'unset!'
-
 'body':
   # resetting keys
   'ctrl-f': 'unset!'
