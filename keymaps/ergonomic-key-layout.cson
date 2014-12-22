@@ -9,7 +9,6 @@
 # https://atom.io/docs/latest/advanced/keymaps
 'body':
   # resetting keys
-  'ctrl-f': 'unset!'
   'cmd-o': 'unset!'
   'cmd-k alt-cmd-w': 'unset!'
   'cmd-k cmd-0': 'unset!'
@@ -38,25 +37,7 @@
   'cmd-k cmd-left': 'unset!'
   'cmd-k cmd-right': 'unset!'
 
-  # split screen
-  'cmd-1': 'maximize-panes:maximize'
-  'cmd-2': 'pane:split-up'
-  'cmd-3': 'pane:split-right'
-  'ctrl-a': 'window:focus-pane-on-left'
-  'ctrl-d': 'window:focus-pane-on-right'
-  'ctrl-w': 'window:focus-pane-above'
-  'ctrl-s': 'window:focus-pane-below'
-
-  # general actions
-  'ctrl-o': 'application:open'
-
 'atom-workspace atom-text-editor:not(.mini)':
-  # redefine pane switching again to override editor defaults
-  'ctrl-a': 'window:focus-pane-on-left'
-  'ctrl-d': 'window:focus-pane-on-right'
-  'ctrl-w': 'window:focus-pane-above'
-  'ctrl-s': 'window:focus-pane-below'
-
   # key navigation
   'cmd-j': 'ergonomic-key-layout:move-left'
   'cmd-k': 'ergonomic-key-layout:move-down'
@@ -75,10 +56,6 @@
 
   # text editing
   'cmd-space': 'ergonomic-key-layout:activate-selection'
-  'ctrl-space': 'autocomplete:toggle'
-  'cmd-f': 'core:delete'
-  'ctrl-f': 'find-and-replace:show'
-  'cmd-g cmd-g': 'go-to-line:toggle'
 
 '.select-list, .tree-view, .preview-pane, .tool-panel':
   'cmd-k': 'core:move-down'
