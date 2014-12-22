@@ -11,7 +11,7 @@ class IncrementalSelection
     @positionChangeEvent = @cursor.onDidChangePosition ->
       a = self.marker.getHeadBufferPosition()
       b = self.cursor.getBufferPosition()
-      self.cursor.selection.setBufferRange([a, b], isReversed: Point.min(a, b) is b)
+      self.cursor.selection.setBufferRange([a, b], reversed: Point.min(a, b) is b)
     @contentChangeEvent = @editor.onDidChange ->
       self.deactivate()
     @activated = true
