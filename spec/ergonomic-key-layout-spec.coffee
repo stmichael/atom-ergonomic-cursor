@@ -1,37 +1,33 @@
-{WorkspaceView, Point} = require 'atom'
+{Point} = require 'atom'
 
 describe "ErgonomicKeyLayout", ->
   editor = null
   cursor = null
 
   beforeEach ->
-    atom.workspaceView = new WorkspaceView
-    atom.workspace = atom.workspaceView.model
-    activationPromise = atom.packages.activatePackage('ergonomic-key-layout')
-    atom.workspaceView.trigger 'ergonomic-key-layout:toggle'
+    waitsForPromise ->
+      atom.packages.activatePackage('ergonomic-key-layout')
     waitsForPromise ->
       atom.workspace.open('sample.js')
-    waitsForPromise ->
-      activationPromise
     runs ->
       editor = atom.workspace.getActiveTextEditor()
       cursor = editor.getLastCursor()
       cursor.setBufferPosition([0, 0])
 
   activateSelection = ->
-    atom.workspaceView.trigger 'ergonomic-key-layout:activate-selection'
+    atom.commands.dispatch atom.views.getView(editor), 'ergonomic-key-layout:activate-selection'
 
   moveRight = ->
-    atom.workspaceView.trigger 'ergonomic-key-layout:move-right'
+    atom.commands.dispatch atom.views.getView(editor), 'ergonomic-key-layout:move-right'
 
   moveLeft = ->
-    atom.workspaceView.trigger 'ergonomic-key-layout:move-left'
+    atom.commands.dispatch atom.views.getView(editor), 'ergonomic-key-layout:move-left'
 
   moveUp = ->
-    atom.workspaceView.trigger 'ergonomic-key-layout:move-up'
+    atom.commands.dispatch atom.views.getView(editor), 'ergonomic-key-layout:move-up'
 
   moveDown = ->
-    atom.workspaceView.trigger 'ergonomic-key-layout:move-down'
+    atom.commands.dispatch atom.views.getView(editor), 'ergonomic-key-layout:move-down'
 
   expectSelectionAt = (start, end) ->
     expect(cursor.selection.getBufferRange().start).toEqual(new Point(start[0], start[1]))
