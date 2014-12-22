@@ -7,10 +7,10 @@
 
 # For more detailed documentation see
 # https://atom.io/docs/latest/advanced/keymaps
-'.workspace':
+'atom-workspace':
   'ctrl-alt-o': 'ergonomic-key-layout:toggle'
 
-'.editor:not(.mini)':
+'atom-text-editor:not(.mini)':
   # resetting keys
   'ctrl-o': 'unset!'
 
@@ -57,7 +57,7 @@
   # general actions
   'ctrl-o': 'application:open'
 
-'.workspace .editor:not(.mini)':
+'atom-workspace atom-text-editor:not(.mini)':
   # redefine pane switching again to override editor defaults
   'ctrl-a': 'window:focus-pane-on-left'
   'ctrl-d': 'window:focus-pane-on-right'
@@ -87,6 +87,6 @@
   'ctrl-f': 'find-and-replace:show'
   'cmd-g cmd-g': 'go-to-line:toggle'
 
-'.select-list, .tree-view, .preview-pane':
+'.select-list, .tree-view, .preview-pane, .tool-panel':
   'cmd-k': 'core:move-down'
   'cmd-i': 'core:move-up'

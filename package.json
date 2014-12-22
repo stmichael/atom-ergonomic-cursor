@@ -7,7 +7,7 @@
   "repository": "https://github.com/stmichael/ergonomic-key-layout",
   "license": "MIT",
   "engines": {
-    "atom": ">0.50.0"
+    "atom": ">0.161.0"
   },
   "dependencies": {
   }
