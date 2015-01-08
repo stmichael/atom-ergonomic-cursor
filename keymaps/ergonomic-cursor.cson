@@ -1,6 +1,7 @@
 'body':
   # resetting keys
   'cmd-o': 'unset!'
+  'cmd-j': 'unset!'
   'cmd-k alt-cmd-w': 'unset!'
   'cmd-k cmd-0': 'unset!'
   'cmd-k cmd-1': 'unset!'
