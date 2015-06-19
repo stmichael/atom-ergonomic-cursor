@@ -48,6 +48,6 @@
   # text editing
   'cmd-space': 'ergonomic-cursor:activate-selection'
 
-'.select-list, .tree-view, .preview-pane, .tool-panel':
+'.select-list, .tree-view, .preview-pane, .atom-panel':
   'cmd-k': 'core:move-down'
   'cmd-i': 'core:move-up'
