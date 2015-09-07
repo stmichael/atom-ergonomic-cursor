@@ -22,7 +22,6 @@ class IncrementalSelection
   deactivate: ->
     if @activated
       @cursor.clearSelection()
-      @cursor.selection.screenRangeChanged(@marker)
       @marker.destroy()
       @positionChangeEvent.dispose()
       @contentChangeEvent.dispose()
