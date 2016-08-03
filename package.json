@@ -1,7 +1,7 @@
 {
   "name": "ergonomic-cursor",
   "main": "./lib/ergonomic-cursor",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Ergonomic key layout for cursor movement in Atom",
   "activationCommands": [],
   "repository": "https://github.com/stmichael/atom-ergonomic-cursor",
