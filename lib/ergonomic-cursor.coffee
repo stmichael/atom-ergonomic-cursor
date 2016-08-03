@@ -21,10 +21,10 @@ class IncrementalSelection
 
   deactivate: ->
     if @activated
-      @cursor.clearSelection()
-      @marker.destroy()
       @positionChangeEvent.dispose()
       @contentChangeEvent.dispose()
+      @cursor.clearSelection()
+      @marker.destroy()
       @activated = false
 
 module.exports =

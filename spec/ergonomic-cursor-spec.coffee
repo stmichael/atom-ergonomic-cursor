@@ -68,15 +68,16 @@ describe "Ergonomic cursor movement", ->
   describe 'selection is activated', ->
     beforeEach ->
       cursor.setBufferPosition([6, 10])
-      activateSelection()
 
     it 'deactivate the selection by activating on the same position', ->
+      activateSelection()
       activateSelection()
       moveRight()
 
       expect(cursor.selection.isEmpty()).toBeTruthy()
 
     it 'reactivate the selection at another position', ->
+      activateSelection()
       moveRight()
 
       activateSelection()
@@ -84,32 +85,48 @@ describe "Ergonomic cursor movement", ->
 
       expectSelectionAt([6, 11], [6, 12])
 
-    it 'deactivate the selection when the buffer changed', ->
+    it 'deactivate the selection if the buffer changed', ->
+      activateSelection()
       editor.setText('new content')
       moveLeft()
 
       expect(cursor.selection.isEmpty()).toBeTruthy()
       expectCursorAt([0, 10])
 
+    it 'deactivates the selection if text has been replaced', ->
+      cursor.setBufferPosition([0, 0])
+      activateSelection()
+      atom.commands.dispatch atom.views.getView(editor), 'editor:move-to-end-of-word'
+      console.log 'make change'
+      cursor.selection.insertText 'a'
+      console.log editor.getText()
+
+      expect(cursor.selection.isEmpty()).toBeTruthy()
+      expectCursorAt([0, 1])
+
     it 'moves to the right while selecting', ->
+      activateSelection()
       moveRight()
 
       expectSelectionAt([6, 10], [6, 11])
       expectCursorAt([6, 11])
 
     it 'moves to the left while selecting', ->
+      activateSelection()
       moveLeft()
 
       expectSelectionAt([6, 9], [6, 10])
       expectCursorAt([6, 9])
 
     it 'moves upwards while selecting', ->
+      activateSelection()
       moveUp()
 
       expectSelectionAt([5, 10], [6, 10])
       expectCursorAt([5, 10])
 
     it 'moves downwards while selecting', ->
+      activateSelection()
       moveDown()
 
       expectSelectionAt([6, 10], [7, 10])
